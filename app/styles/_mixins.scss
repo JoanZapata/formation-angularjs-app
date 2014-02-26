@@ -1,0 +1,10 @@
+/** Accepts 'small', 'medium', 'large' */
+@mixin screen($media) {
+    @if $media == small {
+        @media (max-width: $break-small) { @content; }
+    } @else if $media == medium {
+        @media (max-width: $break-medium) { @content; }
+    } @else if $media == large {
+        @media (max-width: $break-large) { @content; }
+    }
+}
